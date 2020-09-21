@@ -1,0 +1,29 @@
+<h3 class="text-primary ml-2">Search Students</h3>
+<form action="/students" method="GET">
+  <div class="form-group row container">
+    <div class="col-sm-8 col-9">
+      <input type="text" name="name" value="<%= searchOptions.name %>" class="form-control" id="inputPassword">
+    </div>
+    <button type="submit" class="btn btn-primary col-sm-3 col-md-2 col-3">Search</button>
+  </div>
+</form>
+
+<div>
+  <div class="container-fluid">
+    <div class="row">
+      <% students.forEach(student => { %>
+        <div class="col-md-4 card space-around" style="width: 18rem;">
+          <img src="<%= student.coverImagePath %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= student.name %> </h5>
+            <h6 class="card-text"><%= student.email %> </h6>
+            <h6 class="card-text"><%= student.phone %> </h6>
+            <h6 class="card-text"><%= student.degree %> </h6>
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
