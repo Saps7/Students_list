@@ -1,21 +1,21 @@
 <div>
   <label>Name</label>
-  <input type="text" name="name" value="<%= student.name %>">
+  <input class="form-control" type="text" name="name" value="<%= student.name %>" placeholder="Student's Name">
 </div>
 <div>
   <label>Email</label>
-  <input type="text" name="email" value="<%= student.email %>">
+  <input class="form-control" type="email" name="email" value="<%= student.email %>" placeholder="name@example.com">
 </div>
 <div>
   <label>Phone Number:</label>
-  <input type="text" name="phone" value="<%= student.phone %>">
+  <input class="form-control" type="text" name="phone" value="<%= student.phone %>" placeholder="Student's Phone Number">
 </div>
 
-<div>
-  <label>Photo</label>
-  <input type="file" name="cover" class="filepond">
+<div class="form-group">
+  <label for="exampleFormControlFile1">Photo</label>
+  <input type="file" class="form-control-file" id="exampleFormControlFile1">
 </div>
 <div>
   <label>Degree</label>
-  <textarea name="degree"><%= student.degree %></textarea>
+  <input class="form-control" name="degree" value="<%= student.degree %>"></input>
 </div>

@@ -9,19 +9,19 @@
 </form>
 
 <div>
-  <div class="container-fluid">
+  <div class="container-sm">
     <div class="row">
       <% students.forEach(student => { %>
         <div class="col-md-4 card space-around" style="width: 18rem;">
-          <img src="<%= student.coverImagePath %>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><%= student.name %> </h5>
-            <h6 class="card-text"><%= student.email %> </h6>
-            <h6 class="card-text"><%= student.phone %> </h6>
-            <h6 class="card-text"><%= student.degree %> </h6>
-            <a href="#" class="btn btn-primary">Edit</a>
-            <a href="#" class="btn btn-danger">Delete</a>
-          </div>
+          <a href="/students/<%= student.id %>">
+            <img src="<%= student.coverImagePath %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= student.name %> </h5>
+              <h6 class="card-text"><%= student.email %> </h6>
+              <h6 class="card-text"><%= student.phone %> </h6>
+              <h6 class="card-text"><%= student.degree %> </h6>
+            </div>
+          </a>
         </div>
       <% }) %>
     </div>

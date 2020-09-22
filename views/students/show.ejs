@@ -1,0 +1,13 @@
+  <div class="card m-auto" style="width: 22rem;" >
+    <img src="<%= student.coverImagePath %>" class="card-img-top"  alt="student-img">
+    <div class="card-body">
+      <h5 class="card-title"><%= student.name %> </h5>
+      <h6 class="card-text"><%= student.email %> </h6>
+      <h6 class="card-text"><%= student.phone %> </h6>
+      <h6 class="card-text"><%= student.degree %> </h6>
+      <a href="/students/<%= student.id %>/edit" class="btn btn-primary btn-lg">Edit</a>
+      <form method="POST" action="/students/<%= student.id %>?_method=DELETE">
+        <button class="btn btn-danger btn-lg" type="submit">Delete</button>
+      </form>
+    </div>
+  </div>
